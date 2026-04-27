@@ -1,0 +1,238 @@
+/* ШРИФТ */
+
+
+
+/* ====== RESET ====== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ====== GLOBAL ====== */
+
+.header__items{
+  color: #FFF;
+}
+
+.container{
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 50px 0;
+}
+
+header{
+  padding: 30px 0;
+  background-color: #a6a6a6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer{
+  background-color: #000212;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__list{
+    display: flex;
+    align-items: center;
+    gap: 58px;
+}
+
+.hero {
+  padding: 150px 0;
+  background-color: #f2e4e4;
+}
+
+.hero__container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__info {
+  width: 48%;
+  padding-left: 15px;
+}
+
+.hero__image {
+  width: 48%;
+}
+
+.about{
+  background-color: #5064eb;
+}
+
+.cardsstones__items{
+    display:flex;
+    flex-direction: row;
+    
+    
+    width:300px;
+    border-radius: 8px;
+    background-color: white;
+    border:#000 solid 4px;
+}
+
+.cardsstones__content{
+    padding:20px;
+    width: 50%;
+}
+
+.cardsstones__img{
+    width: 50%;
+    height: 100%;
+}
+
+.cardsstones__list{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.about{
+  padding-top: 10px;
+}
+
+.cardsstones__items:nth-child(1){
+  background-color: #aeb4b5;
+}
+
+.cardsstones__items:nth-child(2){
+  background-color: #d9b2a0;
+}
+
+.cardsstones__items:nth-child(3){
+  background-color: #ced5d6;
+}
+
+.cardsstones__items:nth-child(4){
+  background-color: #c9c9c9;
+}
+
+.cardsstones__items:nth-child(5){
+  background-color: #e6806e;
+}
+
+.cardsstones__items:nth-child(6){
+  background-color: #5d735b;
+}
+
+.cardsstones__items:nth-child(7){
+  background-color: #d8d8d5;
+}
+
+.about_voloshin{
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 320px) and (max-width: 700px){
+  .burger-menu{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .burger-menu::before,
+    .burger-menu::after {
+        content: ''; /* пустой контент */
+        background: #fff; /*цвет бургера*/
+        position: absolute; /* позиция для общего блока*/
+        width: 100%; /* ширина*/
+        height: 2px; /* толщина полосок бургера */
+    }
+
+    .burger-menu::before {
+        top: 0; /* расположение верхней линии бургера */
+    }
+
+    .burger-menu span { /*средняя линия в виде span*/
+        background: #fff;
+        position: absolute; 
+        width: 100%;
+        top: 9px;
+        height: 2px; 
+    }
+    .burger-menu::after {
+        bottom: 0; /* расположение нижней линии бургера */
+    }
+    .header__nav{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50vw;
+      height: 100vw;
+      background: #272727;
+      border: #fff solid 1px;
+      padding: 20px 10px;
+      transform: translateX(100%);
+     }
+     .header__list{
+      flex-direction: column;
+      text-align: right;
+     }
+    .burger-menu.active {
+      z-index: 3;
+    }
+
+    .burger-menu.active::before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    .burger-menu.active::after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+
+    .burger-menu.active span {
+      transform: scale(0);
+    }
+
+    .header__nav.active {
+      transform: translate(0);
+    }
+
+
+}
+
